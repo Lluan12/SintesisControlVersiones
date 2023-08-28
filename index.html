@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Control de Versiones</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<nav class="menu">
+			<ul>
+				<li><a href="#in" id="inicio">Inicio</a></li>
+				<li><a href="#intro">Introducción</a></li>
+				<li><a href="#desa">Desarrollo</a></li>
+				<li><a href="#conclusion">Conclusión</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div class="fondo" id="in">
+			<div class="contenido">
+				<h2>¿Qué es un control de versiones, y por qué es importante?</h2>
+				<br>
+				<p>Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante.</p>
+			</div>
+			<div class="vacio">
+			</div>
+		</div>
+	</main>
+	<div id="intro" class="texto">
+
+		<div class="info">
+			<h2>Sistema de Control de Versiones</h2>
+			<br>
+			<p>
+				El uso de un sistema de control de versiones te permite regresar a versiones anteriores de tus archivos, regresar a una versión anterior del proyecto completo, compara los cambios a lo largo del tiempo, ver quien modifico por ultima vez algo que pueda estar causando problemas, entre otras cosas. A través de lo mencionado anteriormente vemos la importancia que tiene el uso de un sistema de control de las versiones (VCS por sus siglas en ingles). Por lo cual es importante como desarrollador conocer este tipo de herramientas que no únicamente nos permite registrar los cambios realizados a un archivo, sino que también nos permite colaborar con otras personas en un proyecto en concreto.
+				<br>Así que iniciaremos contando un poco de la historia de Git. El cual nació en el año 2005, todo a través del mantenimiento del kernel de Linux donde los cambios en el software se realizaban a través de parches y archivos. En el 2002, el proyecto del kernel de Linux empezó a usar un DVCS propietario llamado BitKeeper.
+				<br>En el 2005, la relación entre la comunidad que desarrollaba el kernel de Linux y la compañía que desarrollaba BitKeeper se vino abajo y la herramienta dejó de ser ofrecida de manera gratuita. Esto impulsó a la comunidad de desarrollo de Linux (y en particular a Linus Torvalds, el creador de Linux) a desarrollar su propia herramienta basada en algunas de las lecciones que aprendieron mientras usaban BitKeeper. 
+			</p>
+			<br>
+			<br>
+			<h3 id="desa">Sistemas de Control de Versiones Locales</h3>
+			<br>
+			<p>Un método de control de versiones, usado por muchas personas, es copiar los archivos a otro directorio, este método es muy sencillo, pero trae consigo algunos inconvenientes como que es fácil olvidar en qué directorio te encuentras y guardar accidentalmente en el archivo equivocado o sobrescribir archivos que no querías.
+				<br>Para afrontar este problema los programadores desarrollaron VCS locales que contenían una simple base de datos, en la que se llevaba el registro de todos los cambios realizados a los archivos.
+			</p>
+			<br>
+			<br>
+			<h3>Sistemas de Control de Versiones Centralizados</h3>
+			<br>
+			<p>
+				Otro problema que se presento para el desarrollo fue que las personas necesitan colaborar con desarrolladores en otros sistemas, a lo cual surgio este sistema.
+				<br>Los CVCS tienen un único servidor que contiene todos los archivos versionados y varios clientes que descargan los archivos de ese lugar central.
+				<br>En este tipo de sistema se visualizan algunas ventajas como que se puede saber hasta cierto punto en que están trabajando los otros colaboradores.
+				<br>Pero por otro lado podemos deslumbrar sus desventajas como que al haber un único punto donde se encuentra los archivos es que, si se cae durante un periodo de tiempo, entonces durante ese tiempo nadie podrá colaborar o guardar los cambios en los archivos que hayan trabajado
+			</p>
+			<br>
+			<br>
+			<h3>Sistemas de Control de Versiones Distribuidos</h3>
+			<br>
+			<p>
+				Estos sistemas ofrecen soluciones de los inconvenientes que traen consigo los otros sistemas. En estos sistemas los clientes no únicamente descargan la última copia de los archivos, sino que replica todo el repositorio. Donde en caso de que el servidor deje de funcionar, cualquier repositorio que se encuentran en los clientes pueda restaurarlo. 
+			</p>
+			
+			<br>
+	
+			<p>Ahora veremos cómo Git maneja el conjunto de datos, cada vez que confirmas un cambio, o guardas el estado de tu proyecto en Git, él básicamente toma una foto del aspecto de todos tus archivos en ese momento y guarda una referencia a esa copia instantánea. Para ser eficiente, si los archivos no se han modificado Git no almacena el archivo de nuevo, sino un enlace al archivo anterior idéntico que ya tiene almacenado.</p>
+			<br>
+			<br>
+			<h3>Los Tres Estados</h3>
+			<br>
+			<p>
+				Git maneja tres estados principales en los que se pueden encontrar tus archivos: confirmado (committed), modificado (modified), y preparado (staged). 
+				<br><strong>Confirmado:</strong> significa que los datos están almacenados de manera segura en tu base de datos local.
+				<br><strong>Modificado:</strong> significa que has modificado el archivo, pero todavía no lo has confirmado a tu base de datos.
+				<br><strong>Preparado:</strong> significa que has marcado un archivo modificado en su versión actual para que vaya en tu próxima confirmación.
+			</p>
+	
+	
+			<p>
+				El directorio de Git es donde se almacenan los metadatos y la base de datos de objetos para tu proyecto. Es la parte más importante de Git, y es lo que se copia cuando clonas un repositorio desde otra computadora.
+				<br>El directorio de trabajo es una copia de una versión del proyecto. Estos archivos se sacan de la base de datos en el directorio de Git, y se colocan en tu disco para que los puedas usar o modificar.
+				<br>El área de preparación es un archivo, que almacena información acerca de lo que va a ir en tu próxima confirmación o commit.
+			</p>
+			<br>
+			<br>
+	
+			<h2 id="conclusion">Conclusión</h2>
+			<br>
+			<p>
+				Se presento el uso que tiene el sistema de control de versiones, de esto denotando una importancia para desarrolladores el emplear alguna de estas herramientas, ya que se pueden evitar problemas como el manejo de las versiones, además de que, si sufres algún error o echaste a perder parte del trabajo, esta herramienta te permita regresar a una versión anterior para así recuperar el trabajo.
+				<br>Además de ver los tres estados que maneja Git, esto va a tomar mas relevancia a la hora de trabajar con la herramienta, ya que si no conocemos los estados en lo que se encuentran los archivos de nuestro repositorio no estaríamos aprovechando de manera correcta u optima las funcionalidades que nos ofrece esta herramienta y sobre a la hora de mandarlo a Github que es de donde los demás colaboradores podrán clonar los repositorios a sus equipos de trabajo
+			</p>
+		</div>
+		
+	</div>
+	<footer></footer>
+</body>
+</html>
